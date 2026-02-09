@@ -4,6 +4,11 @@
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h2>Register</h2>
+          @if ($errors->any())
+                <div class="alert alert-danger">
+                    {{ $errors->first() }}
+                </div>
+            @endif
         <form method="POST" action="/register">
             @csrf
             <div class="mb-3">
